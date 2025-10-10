@@ -15,7 +15,7 @@ Note: Sprint 2 – static HTML/CSS only.
 <body>
   <a href="#main" class="sr-only">Skip to main content</a>
 
-  <header class="navbar" role="banner">
+  <header class="navbar">
     <div class="navbar-inner">
       <a href="index.html" class="brand">Recipe Creator</a>
       <nav aria-label="Primary navigation">
@@ -43,8 +43,8 @@ Note: Sprint 2 – static HTML/CSS only.
       <div class="card m-b-1-5">
         <form method="get" action="#">
           <div class="form-row">
-            <label for="max-missing">Maximum missing ingredients: <output for="max-missing" id="max-missing-value">3</output></label>
-            <input type="range" id="max-missing" name="max-missing" min="0" max="5" value="3" step="1" aria-valuemin="0" aria-valuemax="5" aria-valuenow="3">
+            <label for="max-missing">Maximum missing ingredients: <output id="max-missing-value">3</output></label>
+            <input type="range" id="max-missing" name="max-missing" min="0" max="5" value="3" step="1" aria-valuenow="3">
           </div>
           <button type="submit" class="btn btn--primary">Find Matches</button>
         </form>
@@ -98,7 +98,7 @@ Note: Sprint 2 – static HTML/CSS only.
     </section>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
+  <footer class="site-footer">
     <div class="container">
       <p>Recipe Creator • Sprint 2 static prototype • CS 4640</p>
       <p><a href="#main">Back to top</a></p>

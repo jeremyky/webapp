@@ -15,7 +15,7 @@ Note: Sprint 2 – static HTML/CSS only.
 <body>
   <a href="#main" class="sr-only">Skip to main content</a>
 
-  <header class="navbar" role="banner">
+  <header class="navbar">
     <div class="navbar-inner">
       <a href="index.html" class="brand">Recipe Creator</a>
       <nav aria-label="Primary navigation">
@@ -38,9 +38,10 @@ Note: Sprint 2 – static HTML/CSS only.
     <h1>Upload Recipe</h1>
     <p class="lead">Add recipes from a URL or enter them manually.</p>
 
-    <section aria-labelledby="url-heading">
+    <section>
+      <h2 id="url-heading">Import from URL</h2>
       <details>
-        <summary id="url-heading">Import from URL</summary>
+        <summary>Import from URL</summary>
         <form method="get" action="#" style="margin-top: 1rem;">
           <div class="form-row">
             <label for="recipe-url">Recipe URL</label>
@@ -51,9 +52,10 @@ Note: Sprint 2 – static HTML/CSS only.
       </details>
     </section>
 
-    <section aria-labelledby="manual-heading" style="margin-top: 1rem;">
+    <section style="margin-top: 1rem;">
+      <h2 id="manual-heading">Enter Manually</h2>
       <details open>
-        <summary id="manual-heading">Enter Manually</summary>
+        <summary>Enter Manually</summary>
         <form method="get" action="#" style="margin-top: 1rem;">
           <div class="form-row">
             <label for="recipe-title">Recipe Title</label>
@@ -84,7 +86,7 @@ Note: Sprint 2 – static HTML/CSS only.
     </section>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
+  <footer class="site-footer">
     <div class="container">
       <p>Recipe Creator • Sprint 2 static prototype • CS 4640</p>
       <p><a href="#main">Back to top</a></p>

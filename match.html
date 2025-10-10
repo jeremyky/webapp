@@ -1,0 +1,108 @@
+<!--
+Deployed URL: https://cs4640.cs.virginia.edu/juh7hc/recipe-creator/
+Authors: Jeremy Ky, Ashley Wu, Shaunak Sinha
+Note: Sprint 2 – static HTML/CSS only.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Jeremy Ky, Ashley Wu, Shaunak Sinha">
+  <title>Match from Fridge - Recipe Creator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main" class="sr-only">Skip to main content</a>
+
+  <header class="navbar" role="banner">
+    <div class="navbar-inner">
+      <a href="index.html" class="brand">Recipe Creator</a>
+      <nav aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="chat.html">Chat</a>
+        <a href="upload.html">Upload</a>
+        <a href="pantry.html">Pantry</a>
+        <a href="match.html" aria-current="page">Match</a>
+        <a href="cook.html">Cook</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <div class="hero-logo">
+      <img src="uva.jpg" alt="University of Virginia logo">
+    </div>
+
+    <h1>Match from Fridge</h1>
+    <p class="lead">Find recipes based on ingredients you already have.</p>
+
+    <section aria-labelledby="filter-heading">
+      <h2 class="sr-only" id="filter-heading">Filter options</h2>
+      <div class="card m-b-1-5">
+        <form method="get" action="#">
+          <div class="form-row">
+            <label for="max-missing">Maximum missing ingredients: <output for="max-missing" id="max-missing-value">3</output></label>
+            <input type="range" id="max-missing" name="max-missing" min="0" max="5" value="3" step="1" aria-valuemin="0" aria-valuemax="5" aria-valuenow="3">
+          </div>
+          <button type="submit" class="btn btn--primary">Find Matches</button>
+        </form>
+      </div>
+    </section>
+
+    <section aria-labelledby="matches-heading">
+      <h2 id="matches-heading">Recipe Matches</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="card-toolbar">
+            <h3 style="margin: 0;">Chicken and Broccoli Stir Fry</h3>
+            <span class="badge badge--success">100% match</span>
+          </div>
+          <p class="recipe-meta">25 min • Chinese • 4 servings</p>
+          <p>You have all the ingredients needed for this recipe!</p>
+          <a href="recipes.html" class="btn btn--primary">View Recipe</a>
+        </article>
+
+        <article class="card">
+          <div class="card-toolbar">
+            <h3 style="margin: 0;">Garlic Butter Chicken</h3>
+            <span class="badge badge--warning">Missing 1</span>
+          </div>
+          <p class="recipe-meta">30 min • American • 4 servings</p>
+          <details>
+            <summary>Missing ingredients</summary>
+            <ul>
+              <li>Butter (4 tbsp)</li>
+            </ul>
+          </details>
+          <a href="recipes.html" class="btn btn--primary">View Recipe</a>
+        </article>
+
+        <article class="card">
+          <div class="card-toolbar">
+            <h3 style="margin: 0;">Chicken Fried Rice</h3>
+            <span class="badge badge--warning">Missing 2</span>
+          </div>
+          <p class="recipe-meta">20 min • Chinese • 4 servings</p>
+          <details>
+            <summary>Missing ingredients</summary>
+            <ul>
+              <li>Soy sauce (2 tbsp)</li>
+              <li>Eggs (2 pieces)</li>
+            </ul>
+          </details>
+          <a href="recipes.html" class="btn btn--primary">View Recipe</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>Recipe Creator • Sprint 2 static prototype • CS 4640</p>
+      <p><a href="#main">Back to top</a></p>
+    </div>
+  </footer>
+</body>
+</html>

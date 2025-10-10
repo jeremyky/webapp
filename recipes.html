@@ -1,0 +1,171 @@
+<!--
+Deployed URL: https://cs4640.cs.virginia.edu/juh7hc/recipe-creator/
+Authors: Jeremy Ky, Ashley Wu, Shaunak Sinha
+Note: Sprint 2 – static HTML/CSS only.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Jeremy Ky, Ashley Wu, Shaunak Sinha">
+  <title>Browse Recipes - Recipe Creator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main" class="sr-only">Skip to main content</a>
+
+  <header class="navbar" role="banner">
+    <div class="navbar-inner">
+      <a href="index.html" class="brand">Recipe Creator</a>
+      <nav aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="recipes.html" aria-current="page">Recipes</a>
+        <a href="chat.html">Chat</a>
+        <a href="upload.html">Upload</a>
+        <a href="pantry.html">Pantry</a>
+        <a href="match.html">Match</a>
+        <a href="cook.html">Cook</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <div class="hero-logo">
+      <img src="uva.jpg" alt="University of Virginia logo">
+    </div>
+
+    <h1>Browse Recipes</h1>
+    <p class="lead">Filter by cuisine, search by name, or explore our full collection.</p>
+
+    <section aria-labelledby="filters-heading">
+      <h2 class="sr-only" id="filters-heading">Filter recipes</h2>
+      <div class="card m-b-1-5">
+        <form method="get" action="#">
+          <div class="form-row">
+            <div>
+              <label for="search-recipes">Search recipes</label>
+              <input type="search" id="search-recipes" name="search" placeholder="pasta, chicken, etc">
+            </div>
+            <div>
+              <label for="cuisine-filter">Cuisine</label>
+              <select id="cuisine-filter" name="cuisine">
+                <option value="">All cuisines</option>
+                <option value="italian">Italian</option>
+                <option value="chinese">Chinese</option>
+                <option value="mexican">Mexican</option>
+                <option value="indian">Indian</option>
+              </select>
+            </div>
+            <div style="display: flex; align-items: flex-end;">
+              <button type="submit" class="btn btn--primary">Filter</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section aria-labelledby="results-heading">
+      <h2 id="results-heading">All Recipes</h2>
+      <div class="grid">
+        <article class="recipe-card">
+          <div class="recipe-img" role="img" aria-label="Placeholder for Spaghetti Carbonara">
+            [Image]
+          </div>
+          <div class="recipe-content">
+            <h3 class="recipe-title">Spaghetti Carbonara</h3>
+            <p class="recipe-meta">25 min • Italian • 4 servings</p>
+          </div>
+        </article>
+
+        <article class="recipe-card">
+          <div class="recipe-img" role="img" aria-label="Placeholder for Chicken Tikka Masala">
+            [Image]
+          </div>
+          <div class="recipe-content">
+            <h3 class="recipe-title">Chicken Tikka Masala</h3>
+            <p class="recipe-meta">45 min • Indian • 6 servings</p>
+          </div>
+        </article>
+
+        <article class="recipe-card">
+          <div class="recipe-img" role="img" aria-label="Placeholder for Tacos Al Pastor">
+            [Image]
+          </div>
+          <div class="recipe-content">
+            <h3 class="recipe-title">Tacos Al Pastor</h3>
+            <p class="recipe-meta">30 min • Mexican • 8 tacos</p>
+          </div>
+        </article>
+
+        <article class="recipe-card">
+          <div class="recipe-img" role="img" aria-label="Placeholder for Beef Stir Fry">
+            [Image]
+          </div>
+          <div class="recipe-content">
+            <h3 class="recipe-title">Beef Stir Fry</h3>
+            <p class="recipe-meta">20 min • Chinese • 4 servings</p>
+          </div>
+        </article>
+
+        <article class="recipe-card">
+          <div class="recipe-img" role="img" aria-label="Placeholder for Margherita Pizza">
+            [Image]
+          </div>
+          <div class="recipe-content">
+            <h3 class="recipe-title">Margherita Pizza</h3>
+            <p class="recipe-meta">35 min • Italian • 2 servings</p>
+          </div>
+        </article>
+
+        <article class="recipe-card">
+          <div class="recipe-img" role="img" aria-label="Placeholder for Pad Thai">
+            [Image]
+          </div>
+          <div class="recipe-content">
+            <h3 class="recipe-title">Pad Thai</h3>
+            <p class="recipe-meta">30 min • Thai • 4 servings</p>
+          </div>
+        </article>
+
+        <article class="recipe-card">
+          <div class="recipe-img" role="img" aria-label="Placeholder for Greek Salad">
+            [Image]
+          </div>
+          <div class="recipe-content">
+            <h3 class="recipe-title">Greek Salad</h3>
+            <p class="recipe-meta">15 min • Greek • 4 servings</p>
+          </div>
+        </article>
+
+        <article class="recipe-card">
+          <div class="recipe-img" role="img" aria-label="Placeholder for Chicken Noodle Soup">
+            [Image]
+          </div>
+          <div class="recipe-content">
+            <h3 class="recipe-title">Chicken Noodle Soup</h3>
+            <p class="recipe-meta">40 min • American • 6 servings</p>
+          </div>
+        </article>
+
+        <article class="recipe-card">
+          <div class="recipe-img" role="img" aria-label="Placeholder for Vegetable Curry">
+            [Image]
+          </div>
+          <div class="recipe-content">
+            <h3 class="recipe-title">Vegetable Curry</h3>
+            <p class="recipe-meta">35 min • Indian • 5 servings</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>Recipe Creator • Sprint 2 static prototype • CS 4640</p>
+      <p><a href="#main">Back to top</a></p>
+    </div>
+  </footer>
+</body>
+</html>

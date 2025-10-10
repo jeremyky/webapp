@@ -1,0 +1,84 @@
+<!--
+Deployed URL: https://cs4640.cs.virginia.edu/juh7hc/recipe-creator/
+Authors: Jeremy Ky, Ashley Wu, Shaunak Sinha
+Note: Sprint 2 – static HTML/CSS only.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Jeremy Ky, Ashley Wu, Shaunak Sinha">
+  <title>Chat Search - Recipe Creator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main" class="sr-only">Skip to main content</a>
+
+  <header class="navbar" role="banner">
+    <div class="navbar-inner">
+      <a href="index.html" class="brand">Recipe Creator</a>
+      <nav aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="chat.html" aria-current="page">Chat</a>
+        <a href="upload.html">Upload</a>
+        <a href="pantry.html">Pantry</a>
+        <a href="match.html">Match</a>
+        <a href="cook.html">Cook</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <div class="hero-logo">
+      <img src="uva.jpg" alt="University of Virginia logo">
+    </div>
+
+    <h1>Chat Search</h1>
+    <p class="lead">Ask questions in natural language to find recipes, get cooking tips, or plan meals.</p>
+
+    <section aria-labelledby="prompt-heading">
+      <h2 class="sr-only" id="prompt-heading">Enter your question</h2>
+      <div class="card">
+        <form method="get" action="#">
+          <div class="form-row">
+            <label for="chat-prompt">What would you like to cook?</label>
+            <textarea id="chat-prompt" name="prompt" rows="3" placeholder="e.g. I have chicken and broccoli, what can I make for dinner?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary">Search</button>
+        </form>
+      </div>
+    </section>
+
+    <section aria-labelledby="results-heading">
+      <h2 id="results-heading">Results</h2>
+      <div class="card">
+        <h3>Here are some recipes you can make:</h3>
+        <ul>
+          <li><strong>Chicken and Broccoli Stir Fry</strong> - Ready in 25 minutes, uses soy sauce and garlic</li>
+          <li><strong>Baked Chicken with Roasted Broccoli</strong> - Simple one-pan meal, 40 minutes</li>
+          <li><strong>Chicken Broccoli Alfredo</strong> - Creamy pasta dish, requires cream and parmesan</li>
+          <li><strong>Teriyaki Chicken Bowl</strong> - Served over rice with steamed broccoli</li>
+          <li><strong>Chicken and Broccoli Casserole</strong> - Comfort food, needs cheese and breadcrumbs</li>
+        </ul>
+        
+        <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem; align-items: center;">
+          <span>Page:</span>
+          <button type="button" class="btn btn--primary" aria-label="Page 1" aria-current="page">1</button>
+          <button type="button" class="btn" aria-label="Page 2">2</button>
+          <button type="button" class="btn" aria-label="Page 3">3</button>
+          <button type="button" class="btn" aria-label="Next page">Next</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>Recipe Creator • Sprint 2 static prototype • CS 4640</p>
+      <p><a href="#main">Back to top</a></p>
+    </div>
+  </footer>
+</body>
+</html>

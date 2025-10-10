@@ -1,0 +1,124 @@
+<!--
+Deployed URL: https://cs4640.cs.virginia.edu/juh7hc/recipe-creator/
+Authors: Jeremy Ky, Ashley Wu, Shaunak Sinha
+Note: Sprint 2 – static HTML/CSS only.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Jeremy Ky, Ashley Wu, Shaunak Sinha">
+  <title>Cook & History - Recipe Creator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main" class="sr-only">Skip to main content</a>
+
+  <header class="navbar" role="banner">
+    <div class="navbar-inner">
+      <a href="index.html" class="brand">Recipe Creator</a>
+      <nav aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="chat.html">Chat</a>
+        <a href="upload.html">Upload</a>
+        <a href="pantry.html">Pantry</a>
+        <a href="match.html">Match</a>
+        <a href="cook.html" aria-current="page">Cook</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <div class="hero-logo">
+      <img src="uva.jpg" alt="University of Virginia logo">
+    </div>
+
+    <h1>Cook & History</h1>
+    <p class="lead">Start a cooking session and track what you've made.</p>
+
+    <section aria-labelledby="session-heading">
+      <h2 id="session-heading">Start Cooking Session</h2>
+      <div class="card">
+        <h3>Chicken and Broccoli Stir Fry</h3>
+        <p class="recipe-meta">25 min • Chinese • 4 servings</p>
+        
+        <form method="get" action="#">
+          <fieldset class="form-box">
+            <legend class="form-legend">Preparation checklist</legend>
+            
+            <div class="checkbox-item">
+              <input type="checkbox" id="step1" name="step1">
+              <label for="step1">Read through entire recipe</label>
+            </div>
+            
+            <div class="checkbox-item">
+              <input type="checkbox" id="step2" name="step2">
+              <label for="step2">Gather all ingredients</label>
+            </div>
+            
+            <div class="checkbox-item">
+              <input type="checkbox" id="step3" name="step3">
+              <label for="step3">Prepare cooking equipment</label>
+            </div>
+            
+            <div class="checkbox-item">
+              <input type="checkbox" id="step4" name="step4">
+              <label for="step4">Wash and chop vegetables</label>
+            </div>
+          </fieldset>
+          
+          <button type="submit" class="btn btn--primary">Start Cooking</button>
+        </form>
+      </div>
+    </section>
+
+    <section aria-labelledby="history-heading">
+      <h2 id="history-heading">Cooking History</h2>
+      <div class="card">
+        <ul class="history-list">
+          <li class="history-item">
+            <div class="history-header">
+              <h4>Spaghetti Carbonara</h4>
+              <span class="rating">Rated 5/5</span>
+            </div>
+            <p class="history-meta">October 8, 2025 at 6:30 PM • 4 servings</p>
+          </li>
+          
+          <li class="history-item">
+            <div class="history-header">
+              <h4>Chicken Tikka Masala</h4>
+              <span class="rating">Rated 4/5</span>
+            </div>
+            <p class="history-meta">October 5, 2025 at 7:00 PM • 6 servings</p>
+          </li>
+          
+          <li class="history-item">
+            <div class="history-header">
+              <h4>Greek Salad</h4>
+              <span class="rating">Rated 5/5</span>
+            </div>
+            <p class="history-meta">October 3, 2025 at 12:30 PM • 4 servings</p>
+          </li>
+          
+          <li class="history-item">
+            <div class="history-header">
+              <h4>Pad Thai</h4>
+              <span class="rating">Rated 4/5</span>
+            </div>
+            <p class="history-meta">September 30, 2025 at 6:45 PM • 4 servings</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>Recipe Creator • Sprint 2 static prototype • CS 4640</p>
+      <p><a href="#main">Back to top</a></p>
+    </div>
+  </footer>
+</body>
+</html>

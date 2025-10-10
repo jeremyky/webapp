@@ -1,0 +1,94 @@
+<!--
+Deployed URL: https://cs4640.cs.virginia.edu/juh7hc/recipe-creator/
+Authors: Jeremy Ky, Ashley Wu, Shaunak Sinha
+Note: Sprint 2 – static HTML/CSS only.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Jeremy Ky, Ashley Wu, Shaunak Sinha">
+  <title>Upload Recipe - Recipe Creator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main" class="sr-only">Skip to main content</a>
+
+  <header class="navbar" role="banner">
+    <div class="navbar-inner">
+      <a href="index.html" class="brand">Recipe Creator</a>
+      <nav aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="chat.html">Chat</a>
+        <a href="upload.html" aria-current="page">Upload</a>
+        <a href="pantry.html">Pantry</a>
+        <a href="match.html">Match</a>
+        <a href="cook.html">Cook</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <div class="hero-logo">
+      <img src="uva.jpg" alt="University of Virginia logo">
+    </div>
+
+    <h1>Upload Recipe</h1>
+    <p class="lead">Add recipes from a URL or enter them manually.</p>
+
+    <section aria-labelledby="url-heading">
+      <details>
+        <summary id="url-heading">Import from URL</summary>
+        <form method="get" action="#" style="margin-top: 1rem;">
+          <div class="form-row">
+            <label for="recipe-url">Recipe URL</label>
+            <input type="url" id="recipe-url" name="url" placeholder="https://example.com/recipe" required>
+          </div>
+          <button type="submit" class="btn btn--primary">Parse Recipe</button>
+        </form>
+      </details>
+    </section>
+
+    <section aria-labelledby="manual-heading" style="margin-top: 1rem;">
+      <details open>
+        <summary id="manual-heading">Enter Manually</summary>
+        <form method="get" action="#" style="margin-top: 1rem;">
+          <div class="form-row">
+            <label for="recipe-title">Recipe Title</label>
+            <input type="text" id="recipe-title" name="title" placeholder="e.g. Garlic Butter Shrimp" required>
+          </div>
+
+          <div class="form-row">
+            <label for="recipe-image">Image URL</label>
+            <input type="url" id="recipe-image" name="image" placeholder="https://example.com/image.jpg">
+          </div>
+
+          <div class="form-row">
+            <label for="recipe-ingredients">Ingredients (one per line)</label>
+            <textarea id="recipe-ingredients" name="ingredients" rows="6" placeholder="1 lb shrimp, peeled and deveined&#10;4 cloves garlic, minced&#10;4 tbsp butter&#10;Salt and pepper to taste" required></textarea>
+          </div>
+
+          <div class="form-row">
+            <label for="recipe-steps">Steps (one per line)</label>
+            <textarea id="recipe-steps" name="steps" rows="6" placeholder="1. Melt butter in a large pan over medium heat&#10;2. Add garlic and cook until fragrant, about 1 minute&#10;3. Add shrimp and cook until pink, 3-4 minutes per side&#10;4. Season with salt and pepper, serve immediately" required></textarea>
+          </div>
+
+          <div style="display: flex; gap: 0.5rem;">
+            <button type="submit" class="btn btn--primary">Save Recipe</button>
+            <button type="reset" class="btn">Clear Form</button>
+          </div>
+        </form>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>Recipe Creator • Sprint 2 static prototype • CS 4640</p>
+      <p><a href="#main">Back to top</a></p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,25 @@
+# Environment variables (contains passwords)
+.env
+
+# Test/debug files
+check_database.php
+test_connection.php
+quick_test.php
+init_db.php
+populate_sample_data.php
+
+# Temporary files
+*.log
+*.tmp
+error_log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+

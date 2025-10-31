@@ -167,6 +167,15 @@ h2 {
 /* ===== FORMS ===== */
 .form-row {
   margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 label {
@@ -205,6 +214,13 @@ input:invalid,
 select:invalid,
 textarea:invalid {
   border-color: var(--danger);
+}
+
+input.error,
+select.error,
+textarea.error {
+  border-color: var(--danger);
+  outline-color: var(--danger);
 }
 
 /* ===== BADGES ===== */
